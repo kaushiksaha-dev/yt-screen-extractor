@@ -8,7 +8,7 @@ A local Python application and CLI agent tool that takes a YouTube video URL, ex
 
 ---
 
-## Key Features & Upgrades
+## Key Features
 
 - **Direct YouTube Video Ingestion**:
   - Uses `yt-dlp` to download single-file video streams up to 1080p without requiring an external system FFmpeg binary.
@@ -25,7 +25,7 @@ A local Python application and CLI agent tool that takes a YouTube video URL, ex
   - Triggers a 1-second precision refinement pass upon transition detection to capture the exact last-stable frame before any cut.
   - Manual interval control remains available at any time.
 
-- **Optimized PDF Generation (Bug Fix)**:
+- **Lightweight, High-Clarity PDF Compression**:
   - Embeds compressed JPEG streams via `io.BytesIO` and `ImageReader`, with `pageCompression=1` enabled on the ReportLab canvas.
   - Prevents uncompressed bitmap file size bloating (saving 50x–80x storage space without quality loss).
   - Never modifies or downscales the original full-resolution screen PNGs saved on disk.
@@ -64,8 +64,9 @@ A local Python application and CLI agent tool that takes a YouTube video URL, ex
 Ensure Python 3.10+ is installed.
 
 ```bash
-# Navigate to project directory
-cd C:\Users\User\.gemini\antigravity\scratch\yt-screen-extractor
+# Clone the repository
+git clone https://github.com/kaushiksaha-dev/yt-screen-extractor.git
+cd yt-screen-extractor
 
 # Create virtual environment
 python -m venv .venv
@@ -75,6 +76,8 @@ python -m venv .venv
 .venv\Scripts\Activate.ps1
 # Windows Command Prompt:
 .venv\Scripts\activate.bat
+# Linux / macOS:
+# source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
@@ -127,7 +130,7 @@ Run directly from the terminal or automate within agent workflows:
 | `--pdf-quality` | None | PDF quality preset: `balanced`, `high`, `compact` | `balanced` |
 | `--max-pdf-mb` | None | Auto-split PDF if exceeding this size limit in MB (e.g. `25` or `90`) | None |
 | `--skip-blurry` | None | Skip blurry fade/intro transition frames | True |
-| `--tutorial-mode`| None | Only commit screens steady across $\ge 2$ consecutive samples | False |
+| `--tutorial-mode`| None | Only commit screens steady across >= 2 consecutive samples | False |
 | `--mask-webcam` | `-m` | Corner to mask during comparison: `br`, `bl`, `tr`, `tl` | None |
 | `--start` | None | Start timestamp (e.g., `00:01:30` or `90`) | Video start |
 | `--end` | None | End timestamp (e.g., `00:05:00` or `300`) | Video end |
