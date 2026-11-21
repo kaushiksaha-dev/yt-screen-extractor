@@ -2,5 +2,6 @@
 __pycache__/
 */__pycache__/
 *.pyc
-outputs/_temp/
 .thumbnails/
+outputs/*
+!outputs/.gitkeep
