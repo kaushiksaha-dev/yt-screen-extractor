@@ -1,0 +1,32 @@
+============================================================
+           HOW TO SHARE & RUN YT SCREEN EXTRACTOR
+============================================================
+
+FOR THE SENDER (YOU):
+---------------------
+1. When sharing this folder, DO NOT include the '.venv' folder:
+   - Python virtual environments (.venv) have paths hardcoded to your
+     specific computer username (C:\Users\User\...).
+   - Without '.venv', the entire folder is tiny (< 1 MB) instead of ~350 MB!
+2. Simply ZIP the 'yt-screen-extractor' folder (excluding '.venv' and 'outputs')
+   and send it via Google Drive, Slack, Discord, Email, or USB drive.
+
+
+FOR THE RECIPIENT (YOUR FRIEND / COLLEAGUE):
+--------------------------------------------
+1. Prerequisites:
+   - Make sure Python 3.10 or higher is installed (free from https://www.python.org/).
+   - When installing Python, ensure the box "Add Python to PATH" is checked.
+
+2. How to Run:
+   - Extract the ZIP folder anywhere on their computer.
+   - Simply double-click:
+         run_app.bat
+
+3. What happens automatically:
+   - On the very first run, 'run_app.bat' automatically creates their local
+     virtual environment and installs all needed dependencies.
+   - It then automatically opens the web browser to:
+         http://localhost:8501
+   - On future runs, it starts up instantly in 1 second!
+============================================================
