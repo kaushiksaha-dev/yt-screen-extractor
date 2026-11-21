@@ -2,6 +2,10 @@
 
 A local Python application and CLI agent tool that takes a YouTube video URL, extracts every unique presentation screen (slides, code editors, whiteboard sketches, diagrams), eliminates duplicate frames, saves high-resolution image assets, and compiles them into a clean landscape PDF with clickable YouTube timestamp hyperlinks.
 
+<p align="center">
+  <img src="assets/ui_preview.png" alt="YT Screen Extractor Web UI" width="100%">
+</p>
+
 ---
 
 ## Key Features & Upgrades
